@@ -1,6 +1,7 @@
 import React from 'react';
 import { FaEllipsisV } from 'react-icons/fa';
 import { BsFillShareFill, BsPenFill } from 'react-icons/bs';
+import { GrView } from 'react-icons/gr';
 
 function Posts() {
     return (
@@ -30,7 +31,7 @@ function Posts() {
                     <div className='col-5'>
                         <div className='d-flex flex-row-reverse'>
                             <div class="p-2"><BsFillShareFill className='bg-secondary fs-2 p-2'/></div>
-                            <div class="p-2 text-secondary">1.4k Views</div>
+                            <div class="p-2 text-secondary"><GrView className='me-2' />1.4k Views</div>
                         </div>
                     </div>
                 </div>        

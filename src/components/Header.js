@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import './styles.css';
 
 
@@ -7,7 +8,9 @@ function Header() {
         <div>
             <nav className="navbar navbar-expand-lg navbar-light">
                 <div className="container-fluid position-relative">
-                    <img src={'/assets/brand.png'} />
+                    <Link to="/">
+                        <img src={'/assets/brand.png'} />
+                    </Link>
                     <div class="collapse navbar-collapse">
                         <div className="nav-item mx-auto position-absolute w-25 top-0 start-50">
                             <input class="nav-item form-control rounded-pill" type="search" placeholder="Search for your favorite groups in ATG" aria-label="Search"/>
@@ -18,10 +21,8 @@ function Header() {
                                     <b>Create account.{" "}<span className="text-primary">It's free!</span></b>
                                 </a>
                                 <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Action</a></li>
-                                    <li><a class="dropdown-item" href="#">Another action</a></li>
-                                    <li><hr class="dropdown-divider"/></li>
-                                    <li><a class="dropdown-item" href="#">Something else here</a></li>
+                                    <li><a class="dropdown-item" href="#">Sign Up</a></li>
+                                    <li><a class="dropdown-item" href="#">Help</a></li>
                                 </ul>
                             </li>
                         </ul>
