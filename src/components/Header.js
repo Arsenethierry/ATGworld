@@ -1,34 +1,9 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './styles.css';
 
 
 function Header() {
     return (
-        <div>
-            <nav className="navbar navbar-expand-lg navbar-light">
-                <div className="container-fluid position-relative">
-                    <Link to="/">
-                        <img src={'/assets/brand.png'} />
-                    </Link>
-                    <div class="collapse navbar-collapse">
-                        <div className="nav-item mx-auto position-absolute w-25 top-0 start-50">
-                            <input class="nav-item form-control rounded-pill" type="search" placeholder="Search for your favorite groups in ATG" aria-label="Search"/>
-                        </div>
-                        <ul className="navbar-nav me-auto position-absolute top-0 end-0 mt-auto mb-lg-0">
-                            <li className="nav-item dropdown">
-                                <a className="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                                    <b>Create account.{" "}<span className="text-primary">It's free!</span></b>
-                                </a>
-                                <ul className="dropdown-menu" aria-labelledby="navbarDropdown">
-                                    <li><a class="dropdown-item" href="#">Sign Up</a></li>
-                                    <li><a class="dropdown-item" href="#">Help</a></li>
-                                </ul>
-                            </li>
-                        </ul>
-                </div>
-            </div>
-        </nav>
         <div className='jumbotron p-5 mb-4'>
             <div className='container'>
                 <div className='row row-header pt-5'>
@@ -39,7 +14,6 @@ function Header() {
                 </div>
             </div>
         </div>
-    </div>
     );
 }
 

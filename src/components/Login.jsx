@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { FaFacebook } from 'react-icons/fa';
 import { FcGoogle } from 'react-icons/fc';
+import { Link } from 'react-router-dom';
+
 
 
 
@@ -21,7 +23,10 @@ function Login() {
                 <div className='col-12 col-md-6 m-2'>
                     <div className='gap2'>
                         {
-                        isSignin? <h3 className='fw-bolder'>Sign In</h3> : <h3 className='fw-bolder'>Create Account</h3>
+                        isSignin? (
+                        <Link to='loggedin'>
+                            <h3 className='fw-bolder'>Sign In</h3>
+                        </Link>) : <h3 className='fw-bolder'>Create Account</h3>
                         }
                         <form onSubmit={handleSubmit} className='d-grid gap-2'>
                             {

@@ -1,20 +1,27 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './styles.css'
 import Header from '../components/Header'
 import Posts from '../components/Posts';
 import Login from '../components/Login';
 import { BsBoxArrowInRight } from 'react-icons/bs';
+import { MdGroup } from 'react-icons/md';
+import Modal from 'react-bootstrap/Modal';
+import RightSection from '../components/RightSection';
+import Members from '../components/Members';
+import Navbar from '../components/Navbar';
 
 
-const RightSection = () =>{
-    return(
-        <div></div>
-    );
-}
+
 
 function HomePage() {
+const [isModalOpen, setIsModalOpen] = useState(false);
+
+const closeModal = () => setIsModalOpen(false);
+const toggleModal = () => setIsModalOpen(true);
+
     return (
         <div>
+            <Navbar />
             <Header />
             <div className='container'>
                 <div className='row'>
@@ -29,9 +36,9 @@ function HomePage() {
                         </nav>   
                     </div>
                     <div className='d-inline-flex flex-row-reverse col-4 gap-2'>
-                        <button type="button" class="btn btn-outline-secondary"><BsBoxArrowInRight className='me-2 fs-5' />Leave Group</button>
+                        <button type="button" onClick={ toggleModal } class="btn btn-outline-secondary"><MdGroup className='me-2 fs-5'/>Join Group</button>
                         <div class="dropdown">
-                            <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="writePost" data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="btn btn-secondary dropdown-toggle" role="button" id="writePost" data-bs-toggle="dropdown" aria-expanded="false">
                                 Write Post
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="writePost">
@@ -47,14 +54,22 @@ function HomePage() {
                     <div className='col-12 col-md-8'>
                         <Posts />
                         <Posts />
-                        <Posts />
-                        <Posts />
+                        <Members />
                     </div>
                     <div className='col-md-4'>
                         <RightSection />
                     </div>
                 </div>
             </div>
+
+            <Modal show={isModalOpen} onHide={closeModal} dialogClassName="modal-90w">
+                <Modal.Header closeButton>
+                    <p className='text-success w-75'>Let's learn, share &amp; inspire each other with our passion for computer engeneering. Signup now</p>
+                </Modal.Header>
+                <Modal.Body>
+                    <Login />
+                </Modal.Body>
+            </Modal>
         </div>
     );
 }

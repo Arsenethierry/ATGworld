@@ -18,7 +18,6 @@ function Posts() {
                             <h4 className='card-title'>What if famous brands had regular fonts meet? RegularBrands!</h4>
                         </div>
                     </div>
-                    
                 </div>
                 <h5 className='card-text text-secondary py-1'>I've worked in UX for the better part of a decade. From now on, I plan to rei...</h5>
                 <div className='row'>

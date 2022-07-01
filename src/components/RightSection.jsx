@@ -1,24 +1,15 @@
 import React from 'react';
-import Navbar from '../components/Navbar';
-import Posts from '../components/Posts';
 import { MdLocationPin } from 'react-icons/md';
 import { GrClose } from 'react-icons/gr';
 import {ImNotification } from 'react-icons/im';
 import { BiLike } from 'react-icons/bi'
 
-function Feeds({user}) {
+
+
+function RightSection() {
     return (
-       <div>
-        <Navbar user={user} />
-        <div className='row'>
-                <div className='col-12 col-md-8'>
-                    <Posts />
-                    <Posts />
-                    <Posts />
-                    <Posts />
-                </div>
-                <div className='col-md-4'>
-                <div className='row'>
+        <div className='container mx-3'>
+            <div className='row'>
                 <div class="input-group my-3">
                     <MdLocationPin className='fs-2' id="button-addon2" />
                     <input type="text" class="form-control" placeholder="Enter your location" aria-label="Example text with button addon" aria-describedby="button-addon1"/>
@@ -86,10 +77,8 @@ function Feeds({user}) {
                 </div>
             </div>
             <div className='d-flex flex-row-reverse text-primary pt-5'>See more...</div>
-                </div>
-            </div>
-       </div>
+        </div>
     );
 }
 
-export default Feeds;
+export default RightSection;
